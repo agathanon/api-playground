@@ -20,7 +20,7 @@ docker compose up
 ```
 
 Requests with random faults will be served at http://localhost:18080. The API
-is accessible without Toxiproxy at http://localhost:3000, but will stil throw
+is accessible without Toxiproxy at http://localhost:3000, but will still throw
 some bad response codes at random.
 
 ## Routes
