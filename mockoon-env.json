@@ -1,0 +1,355 @@
+{
+    "uuid": "012a98b9-c93d-4976-bf97-e9e82b59226e",
+    "lastMigration": 28,
+    "name": "API Playground",
+    "endpointPrefix": "",
+    "latency": 0,
+    "port": 3002,
+    "hostname": "",
+    "folders": [
+        {
+            "uuid": "1351e587-ced9-4c01-9db2-552223d8f34d",
+            "name": "admin",
+            "collapsed": false,
+            "children": [
+                {
+                    "type": "route",
+                    "uuid": "c4e16401-bca7-4ad0-86e3-7b2805bab5c8"
+                }
+            ]
+        }
+    ],
+    "routes": [
+        {
+            "uuid": "4a388bc0-d863-47d0-94b1-9c679fafa0bf",
+            "type": "http",
+            "documentation": "",
+            "method": "get",
+            "endpoint": "",
+            "responses": [
+                {
+                    "uuid": "95df26c2-3e02-470e-9968-795d4520512b",
+                    "body": "<html>\n  <head>\n    <title>Mock API Playground</title>\n  </head>\n  <body>\n    <h1>Welcome!</h1>\n    <p>This is a mock API playground used for developing robust API wrappers and other code.</p>\n    <h2>Features</h2>\n    <ul>\n      <li>Response latency</li>\n      <li>Multiple response formats</li>\n      <li>Custom errors</li>\n      <li>Random HTTP responses</li>\n    </ul>\n    <h2>Routes</h2>\n    <ul>\n      <li>/users - Get application users</li>\n    </ul>\n  </body>\n</html>",
+                    "latency": 0,
+                    "statusCode": 200,
+                    "label": "",
+                    "headers": [
+                        {
+                            "key": "Content-Type",
+                            "value": "text/html"
+                        }
+                    ],
+                    "bodyType": "INLINE",
+                    "filePath": "",
+                    "databucketID": "qf2z",
+                    "sendFileAsBody": false,
+                    "rules": [],
+                    "rulesOperator": "OR",
+                    "disableTemplating": false,
+                    "fallbackTo404": false,
+                    "default": true,
+                    "crudKey": "id"
+                }
+            ],
+            "enabled": true,
+            "responseMode": null
+        },
+        {
+            "uuid": "304456e5-6751-4d71-b695-d5da46816780",
+            "type": "http",
+            "documentation": "",
+            "method": "get",
+            "endpoint": "users",
+            "responses": [
+                {
+                    "uuid": "d865f3bf-ae8d-47fb-bfce-71e91ff69f46",
+                    "body": "<h1>500 - Internal Server Error</h1>",
+                    "latency": 0,
+                    "statusCode": 500,
+                    "label": "",
+                    "headers": [
+                        {
+                            "key": "Content-Type",
+                            "value": "text/html"
+                        }
+                    ],
+                    "bodyType": "INLINE",
+                    "filePath": "",
+                    "databucketID": "",
+                    "sendFileAsBody": false,
+                    "rules": [],
+                    "rulesOperator": "OR",
+                    "disableTemplating": false,
+                    "fallbackTo404": false,
+                    "default": false,
+                    "crudKey": "id"
+                },
+                {
+                    "uuid": "5b17e301-992e-4650-8b8a-397be2f70e5c",
+                    "body": "<h1>502 - Bad Gateway</h1>",
+                    "latency": 0,
+                    "statusCode": 502,
+                    "label": "",
+                    "headers": [
+                        {
+                            "key": "Content-Type",
+                            "value": "text/html"
+                        }
+                    ],
+                    "bodyType": "INLINE",
+                    "filePath": "",
+                    "databucketID": "",
+                    "sendFileAsBody": false,
+                    "rules": [],
+                    "rulesOperator": "OR",
+                    "disableTemplating": false,
+                    "fallbackTo404": false,
+                    "default": false,
+                    "crudKey": "id"
+                },
+                {
+                    "uuid": "59b52f08-345b-434c-b80a-2a373fff8004",
+                    "body": "[\n  {{#repeat 50}}\n  {\n    \"id\": \"{{faker 'datatype.uuid'}}\",\n    \"username\": \"{{faker 'internet.userName'}}\"\n  }\n  {{/repeat}}\n]",
+                    "latency": 0,
+                    "statusCode": 200,
+                    "label": "",
+                    "headers": [],
+                    "bodyType": "INLINE",
+                    "filePath": "",
+                    "databucketID": "",
+                    "sendFileAsBody": false,
+                    "rules": [],
+                    "rulesOperator": "OR",
+                    "disableTemplating": false,
+                    "fallbackTo404": false,
+                    "default": true,
+                    "crudKey": "id"
+                },
+                {
+                    "uuid": "b290e957-6ee6-400b-a201-aba4517f37b7",
+                    "body": "[\n  {{#repeat 50}}\n  {\n    \"id\": \"{{faker 'datatype.uuid'}}\",\n    \"username\": \"{{faker 'internet.userName'}}\"\n  }\n  {{/repeat}}\n]",
+                    "latency": 0,
+                    "statusCode": 200,
+                    "label": "",
+                    "headers": [],
+                    "bodyType": "INLINE",
+                    "filePath": "",
+                    "databucketID": "",
+                    "sendFileAsBody": false,
+                    "rules": [],
+                    "rulesOperator": "OR",
+                    "disableTemplating": false,
+                    "fallbackTo404": false,
+                    "default": false,
+                    "crudKey": "id"
+                },
+                {
+                    "uuid": "4515b005-c3e6-43d8-b6b9-ae01bdfb1934",
+                    "body": "[\n  {{#repeat 50}}\n  {\n    \"id\": \"{{faker 'datatype.uuid'}}\",\n    \"username\": \"{{faker 'internet.userName'}}\"\n  }\n  {{/repeat}}\n]",
+                    "latency": 0,
+                    "statusCode": 200,
+                    "label": "",
+                    "headers": [],
+                    "bodyType": "INLINE",
+                    "filePath": "",
+                    "databucketID": "",
+                    "sendFileAsBody": false,
+                    "rules": [],
+                    "rulesOperator": "OR",
+                    "disableTemplating": false,
+                    "fallbackTo404": false,
+                    "default": false,
+                    "crudKey": "id"
+                },
+                {
+                    "uuid": "678e7399-4dfa-4916-b616-b4c7de059d5e",
+                    "body": "[\n  {{#repeat 50}}\n  {\n    \"id\": \"{{faker 'datatype.uuid'}}\",\n    \"username\": \"{{faker 'internet.userName'}}\"\n  }\n  {{/repeat}}\n]",
+                    "latency": 0,
+                    "statusCode": 200,
+                    "label": "",
+                    "headers": [],
+                    "bodyType": "INLINE",
+                    "filePath": "",
+                    "databucketID": "",
+                    "sendFileAsBody": false,
+                    "rules": [],
+                    "rulesOperator": "OR",
+                    "disableTemplating": false,
+                    "fallbackTo404": false,
+                    "default": false,
+                    "crudKey": "id"
+                },
+                {
+                    "uuid": "ecf80416-67eb-4b14-b812-ebcbdbc07566",
+                    "body": "[\n  {{#repeat 50}}\n  {\n    \"id\": \"{{faker 'datatype.uuid'}}\",\n    \"username\": \"{{faker 'internet.userName'}}\"\n  }\n  {{/repeat}}\n]",
+                    "latency": 0,
+                    "statusCode": 200,
+                    "label": "",
+                    "headers": [],
+                    "bodyType": "INLINE",
+                    "filePath": "",
+                    "databucketID": "",
+                    "sendFileAsBody": false,
+                    "rules": [],
+                    "rulesOperator": "OR",
+                    "disableTemplating": false,
+                    "fallbackTo404": false,
+                    "default": false,
+                    "crudKey": "id"
+                },
+                {
+                    "uuid": "d7cfc72a-b3ff-4e32-938a-1d6ffb4769da",
+                    "body": "[\n  {{#repeat 50}}\n  {\n    \"id\": \"{{faker 'datatype.uuid'}}\",\n    \"username\": \"{{faker 'internet.userName'}}\"\n  }\n  {{/repeat}}\n]",
+                    "latency": 0,
+                    "statusCode": 200,
+                    "label": "",
+                    "headers": [],
+                    "bodyType": "INLINE",
+                    "filePath": "",
+                    "databucketID": "",
+                    "sendFileAsBody": false,
+                    "rules": [],
+                    "rulesOperator": "OR",
+                    "disableTemplating": false,
+                    "fallbackTo404": false,
+                    "default": false,
+                    "crudKey": "id"
+                },
+                {
+                    "uuid": "d16ac5a3-c97a-427d-9302-cd326a65a885",
+                    "body": "[\n  {{#repeat 50}}\n  {\n    \"id\": \"{{faker 'datatype.uuid'}}\",\n    \"username\": \"{{faker 'internet.userName'}}\"\n  }\n  {{/repeat}}\n]",
+                    "latency": 0,
+                    "statusCode": 200,
+                    "label": "",
+                    "headers": [],
+                    "bodyType": "INLINE",
+                    "filePath": "",
+                    "databucketID": "",
+                    "sendFileAsBody": false,
+                    "rules": [],
+                    "rulesOperator": "OR",
+                    "disableTemplating": false,
+                    "fallbackTo404": false,
+                    "default": false,
+                    "crudKey": "id"
+                }
+            ],
+            "enabled": true,
+            "responseMode": "RANDOM"
+        },
+        {
+            "uuid": "c4e16401-bca7-4ad0-86e3-7b2805bab5c8",
+            "type": "http",
+            "documentation": "",
+            "method": "get",
+            "endpoint": "admin/users",
+            "responses": [
+                {
+                    "uuid": "973c2e8e-53e7-435b-96cc-6808fe3e0602",
+                    "body": "[\n  {{#repeat 10}}\n  {\n    \"id\": \"{{faker 'datatype.uuid'}}\",\n    \"username\": \"{{faker 'internet.userName'}}\",\n    \"isAdmin\": true\n  }\n  {{/repeat}}\n]",
+                    "latency": 0,
+                    "statusCode": 200,
+                    "label": "",
+                    "headers": [],
+                    "bodyType": "INLINE",
+                    "filePath": "",
+                    "databucketID": "",
+                    "sendFileAsBody": false,
+                    "rules": [],
+                    "rulesOperator": "OR",
+                    "disableTemplating": false,
+                    "fallbackTo404": false,
+                    "default": true,
+                    "crudKey": "id"
+                },
+                {
+                    "uuid": "e3660280-e811-4063-9018-ac055ef88dbb",
+                    "body": "<h1>401 - Unauthorized</h1>",
+                    "latency": 0,
+                    "statusCode": 401,
+                    "label": "",
+                    "headers": [
+                        {
+                            "key": "Content-Type",
+                            "value": "text/html"
+                        }
+                    ],
+                    "bodyType": "INLINE",
+                    "filePath": "",
+                    "databucketID": "",
+                    "sendFileAsBody": false,
+                    "rules": [
+                        {
+                            "target": "header",
+                            "modifier": "Authorization",
+                            "value": "Bearer e3797209-119e-4671-8792-3c9e29260b28",
+                            "invert": true,
+                            "operator": "equals"
+                        }
+                    ],
+                    "rulesOperator": "OR",
+                    "disableTemplating": false,
+                    "fallbackTo404": false,
+                    "default": false,
+                    "crudKey": "id"
+                }
+            ],
+            "enabled": true,
+            "responseMode": "DISABLE_RULES"
+        }
+    ],
+    "rootChildren": [
+        {
+            "type": "route",
+            "uuid": "4a388bc0-d863-47d0-94b1-9c679fafa0bf"
+        },
+        {
+            "type": "route",
+            "uuid": "304456e5-6751-4d71-b695-d5da46816780"
+        },
+        {
+            "type": "folder",
+            "uuid": "1351e587-ced9-4c01-9db2-552223d8f34d"
+        }
+    ],
+    "proxyMode": false,
+    "proxyHost": "",
+    "proxyRemovePrefix": false,
+    "tlsOptions": {
+        "enabled": false,
+        "type": "CERT",
+        "pfxPath": "",
+        "certPath": "",
+        "keyPath": "",
+        "caPath": "",
+        "passphrase": ""
+    },
+    "cors": true,
+    "headers": [
+        {
+            "key": "Content-Type",
+            "value": "application/json"
+        }
+    ],
+    "proxyReqHeaders": [
+        {
+            "key": "",
+            "value": ""
+        }
+    ],
+    "proxyResHeaders": [
+        {
+            "key": "",
+            "value": ""
+        }
+    ],
+    "data": [
+        {
+            "uuid": "54bafc70-2d4b-456c-8371-12951f300e49",
+            "id": "qf2z",
+            "name": "Users",
+            "documentation": "",
+            "value": "[\n  {{#repeat 50}}\n  {\n    \"id\": \"{{faker 'datatype.uuid'}}\",\n    \"username\": \"{{faker 'internet.userName'}}\"\n  }\n  {{/repeat}}\n]"
+        }
+    ]
+}

@@ -1,0 +1,9 @@
+version: "3"
+services:
+  mockoon:
+    image: mockoon/cli:latest
+    ports:
+      - 3000:3000
+    volumes:
+      - ./mockoon-env.json:/data:ro
+    command: ["--data", "data"]
