@@ -14,7 +14,7 @@ Requires either [Mockoon Desktop](https://mockcoon.com/download) or
 Import the environment file [mockoon-env.json](mockoon-env.json) into Mockcoon Desktop and click "Start Server".
 
 
-For a more simple deployment use Docker:
+For a more simple deployment, use Docker Compose:
 ```shell
 docker compose up
 ```
