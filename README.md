@@ -4,19 +4,23 @@ other HTTP-related code.
 
 ## Requirements
 Requires either [Mockoon Desktop](https://mockcoon.com/download) or
-[Mockoon CLI](https://hub.docker.com/r/mockoon/cli)
+[Mockoon CLI](https://hub.docker.com/r/mockoon/cli).
 
 ## Features
 - JSON responses
 - Randomized HTTP responses
 
 ## Usage
+Import the environment file [mockoon-env.json](mockoon-env.json) into Mockcoon Desktop and click "Start Server".
+
+
+For a more simple deployment use Docker:
 ```shell
 docker compose up
 ```
 
 Requests will be served at http://localhost:3000 unless another port is specified
-in the compose file.
+in the Mockcoon environment settings or the [docker-compose.yml](docker-compose.yml) file.
 
 ## Routes
 
