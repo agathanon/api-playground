@@ -34,7 +34,7 @@ The `/users` endpoint will return a JSON list of 50 users:
 Randomly returns HTTP 500 and 502 status codes.
 
 ### /admin/users
-The `/admin/users` endpoint will return a JSON list of 50 users:
+The `/admin/users` endpoint will return a JSON list of 10 users:
 ```json
 [ { "id": "string", "username": "string", "isAdmin": "boolean" } ]
 ```
