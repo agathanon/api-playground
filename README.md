@@ -6,6 +6,9 @@ The API is created and served using [Mockoon](https://mockoon.com). Latency,
 timeouts, and outages are introduced at random with
 [Toxiproxy](https://github.com/Shopify/toxiproxy).
 
+If you wish to add your own toxics while the stack is running, the Toxiproxy
+HTTP API is available at http://localhost:8474.
+
 ## Requirements
 - Docker Compose
 
