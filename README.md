@@ -2,25 +2,26 @@
 This is a mock API playground used for developing robust API wrappers and
 other HTTP-related code.
 
+The API is created and served using [Mockoon](https://mockoon.com). Latency,
+timeouts, and outages are introduced at random with
+[Toxiproxy](https://github.com/Shopify/toxiproxy).
+
 ## Requirements
-Requires either [Mockoon Desktop](https://mockcoon.com/download) or
-[Mockoon CLI](https://hub.docker.com/r/mockoon/cli).
+- Docker Compose
 
 ## Features
 - JSON responses
 - Randomized HTTP responses
+- Randomized timeouts, latency, and outages
 
 ## Usage
-Import the environment file [mockoon-env.json](mockoon-env.json) into Mockcoon Desktop and click "Start Server".
-
-
-For a more simple deployment, use Docker Compose:
 ```shell
 docker compose up
 ```
 
-Requests will be served at http://localhost:3000 unless another port is specified
-in the Mockcoon environment settings or the [docker-compose.yml](docker-compose.yml) file.
+Requests with random faults will be served at http://localhost:18080. The API
+is accessible without Toxiproxy at http://localhost:3000, but will stil throw
+some bad response codes at random.
 
 ## Routes
 

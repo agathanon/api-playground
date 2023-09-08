@@ -5,5 +5,17 @@ services:
     ports:
       - 3000:3000
     volumes:
-      - ./mockoon-env.json:/data:ro
+      - ./mockoon/mockoon-env.json:/data:ro
     command: ["--data", "data"]
+  toxiproxy:
+    image: ghcr.io/shopify/toxiproxy:2.6.0
+    ports:
+      - 8474:8474
+      - 18080:18080
+    depends_on:
+      - mockoon
+  toxifier:
+    build:
+      context: ./toxiproxy
+    depends_on:
+      - toxiproxy
