@@ -50,7 +50,7 @@ disable_latency() {
 enable_outage() {
     if (( OUTAGE_ENABLED == 0 )); then
         echo "enabling outage..."
-        curl -s -X POST http://toxiproxy:8474/proxies/$SERVICE_NAME -d'{
+        curl -s -X PATCH http://toxiproxy:8474/proxies/$SERVICE_NAME -d'{
             "enabled": false
         }' > /dev/null
         OUTAGE_ENABLED=1
@@ -60,7 +60,7 @@ enable_outage() {
 disable_outage() {
     if (( OUTAGE_ENABLED == 1 )); then
         echo "disabling outage..."
-        curl -s -X POST http://toxiproxy:8474/proxies/$SERVICE_NAME -d'{
+        curl -s -X PATCH http://toxiproxy:8474/proxies/$SERVICE_NAME -d'{
             "enabled": true
         }' > /dev/null
         OUTAGE_ENABLED=0
